@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html', display="Your Discount Factor: ", display2="Your loan payment: ", pageTitle='Loan Calculator')
+    return render_template('index.html', display="Your Discount Factor: ", display2="Your Loan Payment: ", pageTitle='Loan Calculator')
 
 
 @app.route('/divide', methods=['GET', 'POST'])
@@ -19,7 +19,7 @@ def addition():
           D = (((1 + i)**n)-1)/ (i*( 1 + i)**n)
           P = A/D
 
-          return render_template('index.html', display=D,display2=P,pageTitle='Loan Calculator')
+          return render_template('index.html', display=(f'Your Discount Factor: ${D:.2f}'),display2=(f'Your Loan Payment: ${P:.2f}'),pageTitle='Loan Calculator')
 
       except ValueError:
 
