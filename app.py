@@ -19,7 +19,7 @@ def addition():
           D = (((1 + i)**n)-1)/ (i*( 1 + i)**n)
           P = A/D
 
-          return render_template('index.html', display=(f'Your Discount Factor: ${D:.2f}'),display2=(f'Your Loan Payment: ${P:.2f}'),pageTitle='Loan Calculator')
+          return render_template('index.html', display=(f'Your Discount Factor: {D:.2f}'),display2=(f'Your Loan Payment: ${P:.2f}'),pageTitle='Loan Calculator')
 
       except ValueError:
 
